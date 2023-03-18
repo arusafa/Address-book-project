@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="437.0" prefWidth="1819.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addressbookproject.MainController">
+   <children>
+      <VBox layoutX="22.0" layoutY="30.0" prefHeight="259.0" prefWidth="287.0" spacing="12.0">
+         <children>
+            <Label text="FirstName">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label text="LastName">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label text="HomePhone">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label text="WorkPhone">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Email">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Day">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="22.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="155.0" text="Month">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="184.0" text="Year">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="19.0" layoutY="317.0" prefHeight="104.0" prefWidth="276.0">
+         <children>
+            <TextArea fx:id="tfNotes" prefHeight="148.0" prefWidth="276.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="109.0" layoutY="30.0" prefHeight="232.0" prefWidth="179.0">
+         <children>
+            <TextField fx:id="tfFirstName" prefHeight="11.0" prefWidth="179.0" />
+            <TextField fx:id="tfFLastName">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfHomePhone" layoutX="10.0" layoutY="37.0">
+               <VBox.margin>
+                  <Insets top="1.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfWorkPhone" layoutX="10.0" layoutY="68.0">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfEmail" layoutX="10.0" layoutY="97.0">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Birthday">
+               <font>
+                  <Font name="Calibri Bold Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tfday" layoutX="10.0" layoutY="118.0">
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets top="2.0" />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="tfmonth" layoutX="10.0" layoutY="147.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfyear" layoutX="10.0" layoutY="172.0" prefHeight="16.0" prefWidth="179.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvContact" layoutX="619.0" layoutY="23.0" prefHeight="304.0" prefWidth="1169.0">
+         <columns>
+            <TableColumn fx:id="tblFirstName" prefWidth="71.0" text="First Name" />
+            <TableColumn fx:id="tblLastName" prefWidth="67.0" text="Last Name" />
+            <TableColumn fx:id="tblHomePhone" prefWidth="87.0" text="Home Phone" />
+            <TableColumn fx:id="tblWorkPhone" prefWidth="82.0" text="Work Phone" />
+            <TableColumn fx:id="tblstreetinfo1" prefWidth="73.0" text="StreetInfo1" />
+            <TableColumn fx:id="tblstreetinfo2" prefWidth="73.0" text="StreetInfo2" />
+            <TableColumn fx:id="tblcity" prefWidth="45.0" text="City" />
+            <TableColumn fx:id="tblpostalcode" prefWidth="71.0" text="PostalCode" />
+            <TableColumn fx:id="tblprovince" prefWidth="69.0" text="Province" />
+            <TableColumn fx:id="tblcountry" prefWidth="62.0" text="Country" />
+            <TableColumn fx:id="tblemail" prefWidth="62.0" text="Email" />
+            <TableColumn fx:id="tblday" prefWidth="62.0" text="Day" />
+            <TableColumn fx:id="tblmonth" prefWidth="62.0" text="Month" />
+            <TableColumn fx:id="tblyear" prefWidth="62.0" text="Year" />
+            <TableColumn fx:id="tblnotes" prefWidth="219.0" text="Notes" />
+         </columns>
+      </TableView>
+      <ButtonBar layoutX="450.0" layoutY="348.0" prefHeight="40.0" prefWidth="133.0" />
+      <Button fx:id="btnEdit" layoutX="972.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Edit Contact" textFill="#0d00ff">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnView" layoutX="459.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="133.0" text="View All" textFill="#252424">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="372.0" layoutY="37.0" text="HomeAddress">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfst1" layoutX="388.0" layoutY="71.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label layoutX="318.0" layoutY="75.0" text="StreetInfo1">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="318.0" layoutY="110.0" text="StreetInfo2">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfst2" layoutX="388.0" layoutY="106.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label layoutX="361.0" layoutY="142.0" text="City">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfct" layoutX="388.0" layoutY="138.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label layoutX="319.0" layoutY="173.0" text="PostalCode">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfpc" layoutX="388.0" layoutY="169.0" prefHeight="25.0" prefWidth="195.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="tfpr" layoutX="388.0" layoutY="199.0" prefHeight="25.0" prefWidth="195.0" />
+      <Label layoutX="336.0" layoutY="203.0" text="Province">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="238.0" text="Country">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfco" layoutX="388.0" layoutY="234.0" prefHeight="25.0" prefWidth="195.0" />
+      <Button fx:id="btnAdd" layoutX="320.0" layoutY="327.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Add Contact">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="1243.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete Contact" textFill="RED">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExit" alignment="TOP_CENTER" layoutX="1738.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="50.0" text="Exit" textFill="RED" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="Impact" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NW_RESIZE" />
+         </cursor>
+      </Button>
+      <Label layoutX="19.0" layoutY="289.0" text="Notes">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
